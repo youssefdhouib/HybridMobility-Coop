@@ -9,7 +9,7 @@ engines, **with and without a decision-time negotiation protocol**, against a **
 > generative agents for simulating urban mobility behaviour*. Not affiliated with the laboratories, no code taken
 > from their platform, no survey data used. Author: Youssef Dhouib (ISIMS, Sfax). It measures **coordination quality and cost, not behavioural realism**.
 
-**4-page project brief:** [`docs/HybridMobility-Coop_Brief.pdf`](docs/HybridMobility-Coop_Brief.pdf)
+**Results page:** https://youssefdhouib.github.io/HybridMobility-Coop/ · **4-page project brief:** [`docs/HybridMobility-Coop_Brief.pdf`](docs/HybridMobility-Coop_Brief.pdf)
 
 ## Results at a glance
 

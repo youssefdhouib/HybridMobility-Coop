@@ -291,6 +291,8 @@ def build() -> Path:
   translate the free-text news into a structured fact and leaves the decisions to rules and the protocol.</p>
   <div class="line-badge"><span>{s['instances']} paired instances</span><span>10 conditions</span><span>LLM: {E(model)} via Ollama (local)</span>
   <span>temperature 0 · constrained JSON</span><span>4 decision engines</span><span>synthetic data · not survey-calibrated</span></div>
+  <p class="muted" style="font-size:.9rem">By Youssef Dhouib · Code, data and 4-page brief:
+  <a href="https://github.com/youssefdhouib/HybridMobility-Coop">github.com/youssefdhouib/HybridMobility-Coop</a></p>
 </header>
 
 <section>
@@ -392,6 +394,11 @@ def build() -> Path:
 """
     out = RES / "report.html"
     out.write_text(page)
+    # Standalone copy served by GitHub Pages at the repository root.
+    head = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n')
+    title, rest = page.split("\n", 1)
+    (ROOT / "index.html").write_text(head + title + "\n</head>\n<body style=\"margin:0\">\n" + rest + "\n</body>\n</html>\n")
     return out
 
 
