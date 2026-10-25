@@ -1,0 +1,12 @@
+{
+  "model": "qwen3:4b",
+  "client": {
+    "model": "qwen3:4b",
+    "temperature": 0.0,
+    "seed": 7,
+    "constrained_decoding": true,
+    "think": false
+  },
+  "python": "3.14.4",
+  "started": "2026-10-25 14:13:24"
+}

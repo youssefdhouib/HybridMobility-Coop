@@ -1,0 +1,775 @@
+{
+  "instances": 120,
+  "conditions": [
+    "rule-off",
+    "rule-on",
+    "llm-off",
+    "llm-on",
+    "hybrid-off",
+    "hybrid-on",
+    "interp-off",
+    "interp-on",
+    "central",
+    "oracle"
+  ],
+  "table": {
+    "rule-off": {
+      "n": 120,
+      "regret_mean": 74.2,
+      "regret_ci95": [
+        52.8,
+        97.7
+      ],
+      "on_time_rate": 0.818,
+      "missed_rate": 0.06,
+      "lateness_min_mean": 4.5,
+      "intent_conflicts_initial": 0.28,
+      "violations_committed": 0.28,
+      "exec_failures": 0.56,
+      "messages": 0.9,
+      "deadlocks": 0,
+      "llm_calls_mean": 0.0,
+      "llm_invalid": 0,
+      "fallback_decisions": 0,
+      "tokens_mean": 0,
+      "llm_latency_s_mean": 0.0
+    },
+    "rule-on": {
+      "n": 120,
+      "regret_mean": 31.7,
+      "regret_ci95": [
+        20.0,
+        45.5
+      ],
+      "on_time_rate": 0.862,
+      "missed_rate": 0.03,
+      "lateness_min_mean": 3.1,
+      "intent_conflicts_initial": 0.28,
+      "violations_committed": 0.0,
+      "exec_failures": 0.25,
+      "messages": 7.7,
+      "deadlocks": 0,
+      "llm_calls_mean": 0.0,
+      "llm_invalid": 0,
+      "fallback_decisions": 0,
+      "tokens_mean": 0,
+      "llm_latency_s_mean": 0.0
+    },
+    "llm-off": {
+      "n": 120,
+      "regret_mean": 160.9,
+      "regret_ci95": [
+        137.4,
+        184.9
+      ],
+      "on_time_rate": 0.699,
+      "missed_rate": 0.214,
+      "lateness_min_mean": 4.1,
+      "intent_conflicts_initial": 0.63,
+      "violations_committed": 0.63,
+      "exec_failures": 0.78,
+      "messages": 0.9,
+      "deadlocks": 0,
+      "llm_calls_mean": 2.4,
+      "llm_invalid": 0,
+      "fallback_decisions": 0,
+      "tokens_mean": 1246,
+      "llm_latency_s_mean": 2.02
+    },
+    "llm-on": {
+      "n": 120,
+      "regret_mean": 87.1,
+      "regret_ci95": [
+        65.9,
+        110.7
+      ],
+      "on_time_rate": 0.756,
+      "missed_rate": 0.146,
+      "lateness_min_mean": 3.7,
+      "intent_conflicts_initial": 0.64,
+      "violations_committed": 0.0,
+      "exec_failures": 0.21,
+      "messages": 10.1,
+      "deadlocks": 9,
+      "llm_calls_mean": 3.9,
+      "llm_invalid": 0,
+      "fallback_decisions": 13,
+      "tokens_mean": 2176,
+      "llm_latency_s_mean": 3.35
+    },
+    "hybrid-off": {
+      "n": 120,
+      "regret_mean": 122.9,
+      "regret_ci95": [
+        99.3,
+        149.3
+      ],
+      "on_time_rate": 0.745,
+      "missed_rate": 0.152,
+      "lateness_min_mean": 4.7,
+      "intent_conflicts_initial": 0.48,
+      "violations_committed": 0.48,
+      "exec_failures": 0.64,
+      "messages": 0.9,
+      "deadlocks": 0,
+      "llm_calls_mean": 1.55,
+      "llm_invalid": 0,
+      "fallback_decisions": 0,
+      "tokens_mean": 836,
+      "llm_latency_s_mean": 1.35
+    },
+    "hybrid-on": {
+      "n": 120,
+      "regret_mean": 61.5,
+      "regret_ci95": [
+        44.6,
+        79.6
+      ],
+      "on_time_rate": 0.786,
+      "missed_rate": 0.119,
+      "lateness_min_mean": 3.3,
+      "intent_conflicts_initial": 0.51,
+      "violations_committed": 0.0,
+      "exec_failures": 0.21,
+      "messages": 9.1,
+      "deadlocks": 5,
+      "llm_calls_mean": 2.43,
+      "llm_invalid": 0,
+      "fallback_decisions": 5,
+      "tokens_mean": 1411,
+      "llm_latency_s_mean": 2.14
+    },
+    "interp-off": {
+      "n": 120,
+      "regret_mean": 49.0,
+      "regret_ci95": [
+        30.0,
+        70.4
+      ],
+      "on_time_rate": 0.856,
+      "missed_rate": 0.046,
+      "lateness_min_mean": 3.2,
+      "intent_conflicts_initial": 0.24,
+      "violations_committed": 0.24,
+      "exec_failures": 0.27,
+      "messages": 0.9,
+      "deadlocks": 0,
+      "llm_calls_mean": 0.62,
+      "llm_invalid": 0,
+      "fallback_decisions": 0,
+      "tokens_mean": 322,
+      "llm_latency_s_mean": 0.53
+    },
+    "interp-on": {
+      "n": 120,
+      "regret_mean": 6.6,
+      "regret_ci95": [
+        2.6,
+        12.3
+      ],
+      "on_time_rate": 0.902,
+      "missed_rate": 0.014,
+      "lateness_min_mean": 2.2,
+      "intent_conflicts_initial": 0.24,
+      "violations_committed": 0.0,
+      "exec_failures": 0.0,
+      "messages": 7.4,
+      "deadlocks": 0,
+      "llm_calls_mean": 0.62,
+      "llm_invalid": 0,
+      "fallback_decisions": 0,
+      "tokens_mean": 322,
+      "llm_latency_s_mean": 0.53
+    },
+    "central": {
+      "n": 120,
+      "regret_mean": 31.3,
+      "regret_ci95": [
+        19.3,
+        45.2
+      ],
+      "on_time_rate": 0.862,
+      "missed_rate": 0.035,
+      "lateness_min_mean": 2.8,
+      "intent_conflicts_initial": 0.0,
+      "violations_committed": 0.0,
+      "exec_failures": 0.25,
+      "messages": 0.0,
+      "deadlocks": 0,
+      "llm_calls_mean": 0.0,
+      "llm_invalid": 0,
+      "fallback_decisions": 0,
+      "tokens_mean": 0,
+      "llm_latency_s_mean": 0.0
+    },
+    "oracle": {
+      "n": 120,
+      "regret_mean": 0.0,
+      "regret_ci95": [
+        0.0,
+        0.0
+      ],
+      "on_time_rate": 0.905,
+      "missed_rate": 0.024,
+      "lateness_min_mean": 1.4,
+      "intent_conflicts_initial": 0.12,
+      "violations_committed": 0.12,
+      "exec_failures": 0.03,
+      "messages": 0.0,
+      "deadlocks": 0,
+      "llm_calls_mean": 0.0,
+      "llm_invalid": 0,
+      "fallback_decisions": 0,
+      "tokens_mean": 0,
+      "llm_latency_s_mean": 0.0
+    }
+  },
+  "regret_by_event_kind": {
+    "rule-off": {
+      "none": 48.9,
+      "structured": 90.5,
+      "unstructured": 78.7,
+      "decoy": 48.9
+    },
+    "rule-on": {
+      "none": 0.0,
+      "structured": 1.5,
+      "unstructured": 62.7,
+      "decoy": 0.0
+    },
+    "llm-off": {
+      "none": 126.3,
+      "structured": 228.6,
+      "unstructured": 147.9,
+      "decoy": 112.4
+    },
+    "llm-on": {
+      "none": 36.1,
+      "structured": 103.6,
+      "unstructured": 105.4,
+      "decoy": 32.0
+    },
+    "hybrid-off": {
+      "none": 48.9,
+      "structured": 115.2,
+      "unstructured": 147.9,
+      "decoy": 112.4
+    },
+    "hybrid-on": {
+      "none": 0.0,
+      "structured": 19.3,
+      "unstructured": 105.4,
+      "decoy": 32.0
+    },
+    "interp-off": {
+      "none": 48.9,
+      "structured": 90.5,
+      "unstructured": 28.3,
+      "decoy": 48.9
+    },
+    "interp-on": {
+      "none": 0.0,
+      "structured": 1.5,
+      "unstructured": 12.4,
+      "decoy": 0.0
+    },
+    "central": {
+      "none": 0.0,
+      "structured": 0.0,
+      "unstructured": 62.7,
+      "decoy": 0.0
+    },
+    "oracle": {
+      "none": 0.0,
+      "structured": 0.0,
+      "unstructured": 0.0,
+      "decoy": 0.0
+    }
+  },
+  "regret_by_event": {
+    "rule-off": {
+      "none": 48.9,
+      "bus_strike": 112.7,
+      "heavy_rain": 68.4,
+      "car_breakdown": 57.1,
+      "ringroad_accident": 152.6,
+      "no_trip": 34.3,
+      "deadline_change": 70.6,
+      "decoy": 48.9
+    },
+    "rule-on": {
+      "none": 0.0,
+      "bus_strike": 2.3,
+      "heavy_rain": 0.7,
+      "car_breakdown": 51.8,
+      "ringroad_accident": 153.8,
+      "no_trip": 24.2,
+      "deadline_change": 20.9,
+      "decoy": 0.0
+    },
+    "llm-off": {
+      "none": 126.3,
+      "bus_strike": 220.6,
+      "heavy_rain": 236.6,
+      "car_breakdown": 152.8,
+      "ringroad_accident": 213.9,
+      "no_trip": 64.9,
+      "deadline_change": 159.9,
+      "decoy": 112.4
+    },
+    "llm-on": {
+      "none": 36.1,
+      "bus_strike": 73.5,
+      "heavy_rain": 133.8,
+      "car_breakdown": 77.0,
+      "ringroad_accident": 145.2,
+      "no_trip": 83.9,
+      "deadline_change": 115.7,
+      "decoy": 32.0
+    },
+    "hybrid-off": {
+      "none": 48.9,
+      "bus_strike": 112.7,
+      "heavy_rain": 117.8,
+      "car_breakdown": 152.8,
+      "ringroad_accident": 213.9,
+      "no_trip": 64.9,
+      "deadline_change": 159.9,
+      "decoy": 112.4
+    },
+    "hybrid-on": {
+      "none": 0.0,
+      "bus_strike": 2.3,
+      "heavy_rain": 36.2,
+      "car_breakdown": 77.0,
+      "ringroad_accident": 145.2,
+      "no_trip": 83.9,
+      "deadline_change": 115.7,
+      "decoy": 32.0
+    },
+    "interp-off": {
+      "none": 48.9,
+      "bus_strike": 112.7,
+      "heavy_rain": 68.4,
+      "car_breakdown": 14.9,
+      "ringroad_accident": 22.3,
+      "no_trip": 3.7,
+      "deadline_change": 72.2,
+      "decoy": 48.9
+    },
+    "interp-on": {
+      "none": 0.0,
+      "bus_strike": 2.3,
+      "heavy_rain": 0.7,
+      "car_breakdown": 9.5,
+      "ringroad_accident": 20.6,
+      "no_trip": 0.0,
+      "deadline_change": 19.4,
+      "decoy": 0.0
+    },
+    "central": {
+      "none": 0.0,
+      "bus_strike": 0.0,
+      "heavy_rain": 0.0,
+      "car_breakdown": 51.8,
+      "ringroad_accident": 153.8,
+      "no_trip": 24.2,
+      "deadline_change": 20.9,
+      "decoy": 0.0
+    },
+    "oracle": {
+      "none": 0.0,
+      "bus_strike": 0.0,
+      "heavy_rain": 0.0,
+      "car_breakdown": 0.0,
+      "ringroad_accident": 0.0,
+      "no_trip": 0.0,
+      "deadline_change": 0.0,
+      "decoy": 0.0
+    }
+  },
+  "paired": {
+    "rule-on vs rule-off": {
+      "mean_diff": -42.5,
+      "ci95": [
+        -64.2,
+        -24.2
+      ],
+      "better": 32,
+      "tie": 86,
+      "worse": 2,
+      "unstructured_only": {
+        "mean_diff": -16.0,
+        "ci95": [
+          -30.1,
+          -4.0
+        ],
+        "n": 60
+      }
+    },
+    "llm-on vs llm-off": {
+      "mean_diff": -73.8,
+      "ci95": [
+        -99.3,
+        -45.3
+      ],
+      "better": 70,
+      "tie": 25,
+      "worse": 25,
+      "unstructured_only": {
+        "mean_diff": -42.4,
+        "ci95": [
+          -66.9,
+          -19.7
+        ],
+        "n": 60
+      }
+    },
+    "hybrid-on vs hybrid-off": {
+      "mean_diff": -61.4,
+      "ci95": [
+        -83.6,
+        -40.6
+      ],
+      "better": 56,
+      "tie": 48,
+      "worse": 16,
+      "unstructured_only": {
+        "mean_diff": -42.4,
+        "ci95": [
+          -66.9,
+          -19.7
+        ],
+        "n": 60
+      }
+    },
+    "llm-on vs rule-on": {
+      "mean_diff": 55.4,
+      "ci95": [
+        36.3,
+        77.2
+      ],
+      "better": 8,
+      "tie": 44,
+      "worse": 68,
+      "unstructured_only": {
+        "mean_diff": 42.7,
+        "ci95": [
+          22.4,
+          63.7
+        ],
+        "n": 60
+      }
+    },
+    "hybrid-on vs rule-on": {
+      "mean_diff": 29.8,
+      "ci95": [
+        18.2,
+        43.4
+      ],
+      "better": 8,
+      "tie": 68,
+      "worse": 44,
+      "unstructured_only": {
+        "mean_diff": 42.7,
+        "ci95": [
+          22.4,
+          63.7
+        ],
+        "n": 60
+      }
+    },
+    "hybrid-on vs llm-on": {
+      "mean_diff": -25.6,
+      "ci95": [
+        -42.7,
+        -12.0
+      ],
+      "better": 28,
+      "tie": 91,
+      "worse": 1,
+      "unstructured_only": {
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 60
+      }
+    },
+    "hybrid-off vs rule-off": {
+      "mean_diff": 48.7,
+      "ci95": [
+        32.9,
+        64.7
+      ],
+      "better": 6,
+      "tie": 56,
+      "worse": 58,
+      "unstructured_only": {
+        "mean_diff": 69.2,
+        "ci95": [
+          46.3,
+          92.5
+        ],
+        "n": 60
+      }
+    },
+    "interp-on vs rule-on": {
+      "mean_diff": -25.1,
+      "ci95": [
+        -38.1,
+        -14.5
+      ],
+      "better": 44,
+      "tie": 76,
+      "worse": 0,
+      "unstructured_only": {
+        "mean_diff": -50.3,
+        "ci95": [
+          -74.1,
+          -30.4
+        ],
+        "n": 60
+      }
+    },
+    "interp-on vs hybrid-on": {
+      "mean_diff": -55.0,
+      "ci95": [
+        -71.7,
+        -39.0
+      ],
+      "better": 68,
+      "tie": 52,
+      "worse": 0,
+      "unstructured_only": {
+        "mean_diff": -93.0,
+        "ci95": [
+          -119.2,
+          -68.7
+        ],
+        "n": 60
+      }
+    },
+    "interp-off vs rule-off": {
+      "mean_diff": -25.2,
+      "ci95": [
+        -38.2,
+        -14.4
+      ],
+      "better": 40,
+      "tie": 79,
+      "worse": 1,
+      "unstructured_only": {
+        "mean_diff": -50.4,
+        "ci95": [
+          -74.5,
+          -29.7
+        ],
+        "n": 60
+      }
+    },
+    "rule-on vs central": {
+      "mean_diff": 0.4,
+      "ci95": [
+        0.0,
+        1.1
+      ],
+      "better": 0,
+      "tie": 118,
+      "worse": 2,
+      "unstructured_only": {
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 60
+      }
+    },
+    "llm-on vs central": {
+      "mean_diff": 55.8,
+      "ci95": [
+        36.6,
+        77.8
+      ],
+      "better": 8,
+      "tie": 43,
+      "worse": 69,
+      "unstructured_only": {
+        "mean_diff": 42.7,
+        "ci95": [
+          22.4,
+          63.7
+        ],
+        "n": 60
+      }
+    },
+    "interp-on vs central": {
+      "mean_diff": -24.8,
+      "ci95": [
+        -37.9,
+        -14.1
+      ],
+      "better": 44,
+      "tie": 74,
+      "worse": 2,
+      "unstructured_only": {
+        "mean_diff": -50.3,
+        "ci95": [
+          -74.1,
+          -30.4
+        ],
+        "n": 60
+      }
+    }
+  },
+  "decoy_overreaction": {
+    "rule-off": {
+      "agents_changed_plan": "0/36",
+      "mean_cost_delta": 0.0
+    },
+    "rule-on": {
+      "agents_changed_plan": "0/36",
+      "mean_cost_delta": 0.0
+    },
+    "llm-off": {
+      "agents_changed_plan": "2/36",
+      "mean_cost_delta": -13.9
+    },
+    "llm-on": {
+      "agents_changed_plan": "11/36",
+      "mean_cost_delta": -4.1
+    },
+    "hybrid-off": {
+      "agents_changed_plan": "12/36",
+      "mean_cost_delta": 63.5
+    },
+    "hybrid-on": {
+      "agents_changed_plan": "8/36",
+      "mean_cost_delta": 32.0
+    },
+    "interp-off": {
+      "agents_changed_plan": "0/36",
+      "mean_cost_delta": 0.0
+    },
+    "interp-on": {
+      "agents_changed_plan": "0/36",
+      "mean_cost_delta": 0.0
+    },
+    "central": {
+      "agents_changed_plan": "0/36",
+      "mean_cost_delta": 0.0
+    },
+    "oracle": {
+      "agents_changed_plan": "0/36",
+      "mean_cost_delta": 0.0
+    }
+  },
+  "hybrid": {
+    "hybrid-off": {
+      "episodes_with_escalation": 80,
+      "episodes": 120,
+      "llm_calls_total": 186,
+      "llm-off_calls_total": 288,
+      "escalations_on_ordinary_or_structured_days": 5
+    },
+    "hybrid-on": {
+      "episodes_with_escalation": 80,
+      "episodes": 120,
+      "llm_calls_total": 292,
+      "llm-on_calls_total": 468,
+      "escalations_on_ordinary_or_structured_days": 5
+    }
+  },
+  "uptake": {
+    "rule-off": {
+      "car_breakdown": "0/15",
+      "deadline_change": "7/15",
+      "no_trip": "0/15",
+      "ringroad_accident": "1/15"
+    },
+    "rule-on": {
+      "car_breakdown": "0/15",
+      "deadline_change": "7/15",
+      "no_trip": "0/15",
+      "ringroad_accident": "2/15"
+    },
+    "llm-off": {
+      "car_breakdown": "4/15",
+      "deadline_change": "5/15",
+      "no_trip": "6/15",
+      "ringroad_accident": "1/15"
+    },
+    "llm-on": {
+      "car_breakdown": "3/15",
+      "deadline_change": "6/15",
+      "no_trip": "2/15",
+      "ringroad_accident": "4/15"
+    },
+    "hybrid-off": {
+      "car_breakdown": "4/15",
+      "deadline_change": "5/15",
+      "no_trip": "6/15",
+      "ringroad_accident": "1/15"
+    },
+    "hybrid-on": {
+      "car_breakdown": "3/15",
+      "deadline_change": "6/15",
+      "no_trip": "2/15",
+      "ringroad_accident": "4/15"
+    },
+    "interp-off": {
+      "car_breakdown": "12/15",
+      "deadline_change": "7/15",
+      "no_trip": "15/15",
+      "ringroad_accident": "14/15"
+    },
+    "interp-on": {
+      "car_breakdown": "15/15",
+      "deadline_change": "7/15",
+      "no_trip": "15/15",
+      "ringroad_accident": "15/15"
+    },
+    "central": {
+      "car_breakdown": "0/15",
+      "deadline_change": "7/15",
+      "no_trip": "0/15",
+      "ringroad_accident": "2/15"
+    },
+    "oracle": {
+      "car_breakdown": "15/15",
+      "deadline_change": "8/15",
+      "no_trip": "15/15",
+      "ringroad_accident": "15/15"
+    }
+  },
+  "interpretation_accuracy": {
+    "interp-off": {
+      "car_breakdown": "15/15",
+      "deadline_change": "15/15",
+      "decoy": "15/15",
+      "no_trip": "15/15",
+      "ringroad_accident": "15/15"
+    },
+    "interp-on": {
+      "car_breakdown": "15/15",
+      "deadline_change": "15/15",
+      "decoy": "15/15",
+      "no_trip": "15/15",
+      "ringroad_accident": "15/15"
+    }
+  },
+  "run_meta": {
+    "model": "qwen2.5:3b",
+    "client": {
+      "model": "qwen2.5:3b",
+      "temperature": 0.0,
+      "seed": 7,
+      "constrained_decoding": true,
+      "think": null
+    },
+    "python": "3.14.4",
+    "started": "2026-10-25 14:13:23"
+  }
+}

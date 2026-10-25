@@ -1,0 +1,33 @@
+{
+  "model": "qwen3:4b",
+  "n": 80,
+  "exact": 75,
+  "exact_and_amount": 75,
+  "by_type": {
+    "car_breakdown": {
+      "exact": "15/15",
+      "exact_and_amount": "15/15"
+    },
+    "ringroad": {
+      "exact": "15/15",
+      "exact_and_amount": "15/15"
+    },
+    "no_trip": {
+      "exact": "15/15",
+      "exact_and_amount": "15/15"
+    },
+    "deadline": {
+      "exact": "10/15",
+      "exact_and_amount": "10/15"
+    },
+    "decoy": {
+      "exact": "20/20",
+      "exact_and_amount": "20/20"
+    }
+  }
+}
+MISS martin deadline#0 | Marie, the team meeting at the Purpan hospital has been brought forward: please  -> member_earlier_deadline marie none
+MISS dubois deadline#0 | Claire, the team meeting at the law courts has been brought forward: please be t -> member_earlier_deadline claire none
+MISS benali deadline#0 | Samira, the team meeting at the pharmacy has been brought forward: please be the -> member_earlier_deadline samira none
+MISS flatshare deadline#0 | Sofia, the team meeting at the airport logistics hub has been brought forward: p -> member_earlier_deadline sofia none
+MISS garcia deadline#0 | David, the team meeting at the restaurant has been brought forward: please be th -> member_earlier_deadline david none

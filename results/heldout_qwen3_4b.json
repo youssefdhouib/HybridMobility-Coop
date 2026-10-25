@@ -1,0 +1,1310 @@
+{
+  "model": "qwen3:4b",
+  "n": 80,
+  "exact": 75,
+  "exact_and_amount": 75,
+  "by_type": {
+    "car_breakdown": {
+      "exact": "15/15",
+      "exact_and_amount": "15/15"
+    },
+    "ringroad": {
+      "exact": "15/15",
+      "exact_and_amount": "15/15"
+    },
+    "no_trip": {
+      "exact": "15/15",
+      "exact_and_amount": "15/15"
+    },
+    "deadline": {
+      "exact": "10/15",
+      "exact_and_amount": "10/15"
+    },
+    "decoy": {
+      "exact": "20/20",
+      "exact_and_amount": "20/20"
+    }
+  },
+  "rows": [
+    {
+      "household": "martin",
+      "case": "car_breakdown#0",
+      "text": "The family car failed its brake test yesterday; the garage says it is not safe to drive until the pads are replaced.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The family car failed its brake test yesterday; the garage says it is not safe to drive until the pads are replaced"
+      },
+      "latency_ms": 1836,
+      "tokens": 540
+    },
+    {
+      "household": "martin",
+      "case": "car_breakdown#1",
+      "text": "The family car has a flat tyre this morning and the spare is flat too.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The family car has a flat tyre this morning and the spare is flat too"
+      },
+      "latency_ms": 1599,
+      "tokens": 524
+    },
+    {
+      "household": "martin",
+      "case": "car_breakdown#2",
+      "text": "Oil was leaking under the family car last night; the mechanic asked us to leave it parked until Thursday.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Oil was leaking under the family car last night; the mechanic asked us to leave it parked until Thursday"
+      },
+      "latency_ms": 1708,
+      "tokens": 534
+    },
+    {
+      "household": "martin",
+      "case": "ringroad#0",
+      "text": "Traffic alert 07:00: roadworks have closed two lanes on the main road into Blagnac; allow about 40 more minutes by car.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Blagnac",
+        "minutes": 40,
+        "evidence": "roadworks have closed two lanes on the main road into Blagnac; allow about 40 more minutes by car"
+      },
+      "latency_ms": 1857,
+      "tokens": 553
+    },
+    {
+      "household": "martin",
+      "case": "ringroad#1",
+      "text": "Police have blocked the bridge towards Blagnac after a crash; car journeys to Blagnac will take around 40 minutes longer.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Blagnac",
+        "minutes": 40,
+        "evidence": "Police have blocked the bridge towards Blagnac after a crash; car journeys to Blagnac will take around 40 minutes longer"
+      },
+      "latency_ms": 1928,
+      "tokens": 550
+    },
+    {
+      "household": "martin",
+      "case": "ringroad#2",
+      "text": "Navigation app: severe congestion towards Blagnac this morning, +40 min for drivers.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Blagnac",
+        "minutes": 40,
+        "evidence": "severe congestion towards Blagnac this morning, +40 min for drivers"
+      },
+      "latency_ms": 1667,
+      "tokens": 530
+    },
+    {
+      "household": "martin",
+      "case": "no_trip#0",
+      "text": "The teachers at the Jules-Ferry primary school are on strike today; pupils should not come in.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "lea",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The teachers at the Jules-Ferry primary school are on strike today; pupils should not come in"
+      },
+      "latency_ms": 1706,
+      "tokens": 534
+    },
+    {
+      "household": "martin",
+      "case": "no_trip#1",
+      "text": "Message from the Jules-Ferry primary school: because of a water leak, classes are cancelled today and Lea stays home.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "lea",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "classes are cancelled today and Lea stays home"
+      },
+      "latency_ms": 1393,
+      "tokens": 528
+    },
+    {
+      "household": "martin",
+      "case": "no_trip#2",
+      "text": "The Jules-Ferry primary school is closed this morning for a gas inspection; no lessons today.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "lea",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The Jules-Ferry primary school is closed this morning for a gas inspection; no lessons today"
+      },
+      "latency_ms": 1699,
+      "tokens": 532
+    },
+    {
+      "household": "martin",
+      "case": "deadline#0",
+      "text": "Marie, the team meeting at the Purpan hospital has been brought forward: please be there by 07:15.",
+      "exact": false,
+      "amount_ok": false,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "marie",
+        "district": "none",
+        "minutes": 0,
+        "rejected": "missing member/district/minutes"
+      },
+      "latency_ms": 1858,
+      "tokens": 546
+    },
+    {
+      "household": "martin",
+      "case": "deadline#1",
+      "text": "Reminder for Marie: inspection visit today, you need to be at the Purpan hospital half an hour earlier, at 07:15.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "marie",
+        "district": "Purpan",
+        "minutes": 30,
+        "evidence": "inspection visit today, you need to be at the Purpan hospital half an hour earlier, at 07:15"
+      },
+      "latency_ms": 2060,
+      "tokens": 555
+    },
+    {
+      "household": "martin",
+      "case": "deadline#2",
+      "text": "Marie's manager asks everyone at the Purpan hospital to start 30 minutes early today (07:15).",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "marie",
+        "district": "none",
+        "minutes": 30,
+        "evidence": "Marie's manager asks everyone at the Purpan hospital to start 30 minutes early today (07:15)"
+      },
+      "latency_ms": 1937,
+      "tokens": 548
+    },
+    {
+      "household": "martin",
+      "case": "decoy#0",
+      "text": "Car wash promotion: 20% off next week at the station on the ring road.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Car wash promotion: 20% off next week at the station on the ring road"
+      },
+      "latency_ms": 1608,
+      "tokens": 528
+    },
+    {
+      "household": "martin",
+      "case": "decoy#1",
+      "text": "The school canteen menu for next month is now online.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The school canteen menu for next month is now online"
+      },
+      "latency_ms": 1441,
+      "tokens": 516
+    },
+    {
+      "household": "martin",
+      "case": "decoy#2",
+      "text": "Bus operator survey: tell us what you think of the new timetable (closes in two weeks).",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Bus operator survey: tell us what you think of the new timetable (closes in two weeks)"
+      },
+      "latency_ms": 1655,
+      "tokens": 530
+    },
+    {
+      "household": "martin",
+      "case": "decoy#3",
+      "text": "Weather: sunny and mild all week.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "sunny and mild all week"
+      },
+      "latency_ms": 1267,
+      "tokens": 505
+    },
+    {
+      "household": "dubois",
+      "case": "car_breakdown#0",
+      "text": "The older of the two cars failed its brake test yesterday; the garage says it is not safe to drive until the pads are replaced.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The older of the two cars failed its brake test yesterday; the garage says it is not safe to drive until the pads are replaced"
+      },
+      "latency_ms": 1886,
+      "tokens": 516
+    },
+    {
+      "household": "dubois",
+      "case": "car_breakdown#1",
+      "text": "The older of the two cars has a flat tyre this morning and the spare is flat too.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The older of the two cars has a flat tyre this morning and the spare is flat too"
+      },
+      "latency_ms": 1630,
+      "tokens": 500
+    },
+    {
+      "household": "dubois",
+      "case": "car_breakdown#2",
+      "text": "Oil was leaking under the older of the two cars last night; the mechanic asked us to leave it parked until Thursday.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Oil was leaking under the older of the two cars last night; the mechanic asked us to leave it parked until Thursday"
+      },
+      "latency_ms": 1778,
+      "tokens": 510
+    },
+    {
+      "household": "dubois",
+      "case": "ringroad#0",
+      "text": "Traffic alert 07:00: roadworks have closed two lanes on the main road into Labege; allow about 40 more minutes by car.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Labege",
+        "minutes": 40,
+        "evidence": "roadworks have closed two lanes on the main road into Labege; allow about 40 more minutes by car"
+      },
+      "latency_ms": 1831,
+      "tokens": 523
+    },
+    {
+      "household": "dubois",
+      "case": "ringroad#1",
+      "text": "Police have blocked the bridge towards Labege after a crash; car journeys to Labege will take around 40 minutes longer.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Labege",
+        "minutes": 40,
+        "evidence": "Police have blocked the bridge towards Labege after a crash; car journeys to Labege will take around 40 minutes longer"
+      },
+      "latency_ms": 1918,
+      "tokens": 520
+    },
+    {
+      "household": "dubois",
+      "case": "ringroad#2",
+      "text": "Navigation app: severe congestion towards Labege this morning, +40 min for drivers.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Labege",
+        "minutes": 40,
+        "evidence": "severe congestion towards Labege this morning, +40 min for drivers"
+      },
+      "latency_ms": 1655,
+      "tokens": 500
+    },
+    {
+      "household": "dubois",
+      "case": "no_trip#0",
+      "text": "The teachers at the Saint-Aubin nursery school are on strike today; pupils should not come in.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "noah",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The teachers at the Saint-Aubin nursery school are on strike today; pupils should not come in"
+      },
+      "latency_ms": 1725,
+      "tokens": 505
+    },
+    {
+      "household": "dubois",
+      "case": "no_trip#1",
+      "text": "Message from the Saint-Aubin nursery school: because of a water leak, classes are cancelled today and Noah stays home.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "noah",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "classes are cancelled today and Noah stays home"
+      },
+      "latency_ms": 1387,
+      "tokens": 497
+    },
+    {
+      "household": "dubois",
+      "case": "no_trip#2",
+      "text": "The Saint-Aubin nursery school is closed this morning for a gas inspection; no lessons today.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "noah",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The Saint-Aubin nursery school is closed this morning for a gas inspection; no lessons today"
+      },
+      "latency_ms": 1699,
+      "tokens": 503
+    },
+    {
+      "household": "dubois",
+      "case": "deadline#0",
+      "text": "Claire, the team meeting at the law courts has been brought forward: please be there by 08:15.",
+      "exact": false,
+      "amount_ok": false,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "claire",
+        "district": "none",
+        "minutes": 0,
+        "rejected": "missing member/district/minutes"
+      },
+      "latency_ms": 1856,
+      "tokens": 514
+    },
+    {
+      "household": "dubois",
+      "case": "deadline#1",
+      "text": "Reminder for Claire: inspection visit today, you need to be at the law courts half an hour earlier, at 08:15.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "claire",
+        "district": "Centre",
+        "minutes": 30,
+        "evidence": "inspection visit today, you need to be at the law courts half an hour earlier, at 08:15"
+      },
+      "latency_ms": 1906,
+      "tokens": 521
+    },
+    {
+      "household": "dubois",
+      "case": "deadline#2",
+      "text": "Claire's manager asks everyone at the law courts to start 30 minutes early today (08:15).",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "claire",
+        "district": "Centre",
+        "minutes": 30,
+        "evidence": "Claire's manager asks everyone at the law courts to start 30 minutes early today (08:15)"
+      },
+      "latency_ms": 1929,
+      "tokens": 516
+    },
+    {
+      "household": "dubois",
+      "case": "decoy#0",
+      "text": "Car wash promotion: 20% off next week at the station on the ring road.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Car wash promotion: 20% off next week at the station on the ring road"
+      },
+      "latency_ms": 1591,
+      "tokens": 498
+    },
+    {
+      "household": "dubois",
+      "case": "decoy#1",
+      "text": "The school canteen menu for next month is now online.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The school canteen menu for next month is now online"
+      },
+      "latency_ms": 1445,
+      "tokens": 486
+    },
+    {
+      "household": "dubois",
+      "case": "decoy#2",
+      "text": "Bus operator survey: tell us what you think of the new timetable (closes in two weeks).",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Bus operator survey: tell us what you think of the new timetable (closes in two weeks)"
+      },
+      "latency_ms": 1629,
+      "tokens": 500
+    },
+    {
+      "household": "dubois",
+      "case": "decoy#3",
+      "text": "Weather: sunny and mild all week.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Weather: sunny and mild all week"
+      },
+      "latency_ms": 1285,
+      "tokens": 476
+    },
+    {
+      "household": "benali",
+      "case": "car_breakdown#0",
+      "text": "The family car failed its brake test yesterday; the garage says it is not safe to drive until the pads are replaced.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The family car failed its brake test yesterday; the garage says it is not safe to drive until the pads are replaced"
+      },
+      "latency_ms": 1787,
+      "tokens": 513
+    },
+    {
+      "household": "benali",
+      "case": "car_breakdown#1",
+      "text": "The family car has a flat tyre this morning and the spare is flat too.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The family car has a flat tyre this morning and the spare is flat too"
+      },
+      "latency_ms": 1575,
+      "tokens": 497
+    },
+    {
+      "household": "benali",
+      "case": "car_breakdown#2",
+      "text": "Oil was leaking under the family car last night; the mechanic asked us to leave it parked until Thursday.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Oil was leaking under the family car last night; the mechanic asked us to leave it parked until Thursday"
+      },
+      "latency_ms": 1703,
+      "tokens": 507
+    },
+    {
+      "household": "benali",
+      "case": "ringroad#0",
+      "text": "Traffic alert 07:00: roadworks have closed two lanes on the main road into Compans; allow about 40 more minutes by car.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Compans",
+        "minutes": 40,
+        "evidence": "roadworks have closed two lanes on the main road into Compans; allow about 40 more minutes by car"
+      },
+      "latency_ms": 1785,
+      "tokens": 523
+    },
+    {
+      "household": "benali",
+      "case": "ringroad#1",
+      "text": "Police have blocked the bridge towards Compans after a crash; car journeys to Compans will take around 40 minutes longer.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Compans",
+        "minutes": 40,
+        "evidence": "Police have blocked the bridge towards Comp: car journeys to Compans will take around 40 minutes longer"
+      },
+      "latency_ms": 1738,
+      "tokens": 514
+    },
+    {
+      "household": "benali",
+      "case": "ringroad#2",
+      "text": "Navigation app: severe congestion towards Compans this morning, +40 min for drivers.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Compans",
+        "minutes": 40,
+        "evidence": "severe congestion towards Compans this morning, +40 min for drivers"
+      },
+      "latency_ms": 1599,
+      "tokens": 500
+    },
+    {
+      "household": "benali",
+      "case": "no_trip#0",
+      "text": "The teachers at the Minimes primary school are on strike today; pupils should not come in.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "yanis",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The teachers at the Minimes primary school are on strike today; pupils should not come in"
+      },
+      "latency_ms": 1652,
+      "tokens": 504
+    },
+    {
+      "household": "benali",
+      "case": "no_trip#1",
+      "text": "Message from the Minimes primary school: because of a water leak, classes are cancelled today and Yanis stays home.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "yanis",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "classes are cancelled today and Yanis stays home"
+      },
+      "latency_ms": 1412,
+      "tokens": 500
+    },
+    {
+      "household": "benali",
+      "case": "no_trip#2",
+      "text": "The Minimes primary school is closed this morning for a gas inspection; no lessons today.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "yanis",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The Minimes primary school is closed this morning for a gas inspection; no lessons today"
+      },
+      "latency_ms": 1628,
+      "tokens": 502
+    },
+    {
+      "household": "benali",
+      "case": "deadline#0",
+      "text": "Samira, the team meeting at the pharmacy has been brought forward: please be there by 08:15.",
+      "exact": false,
+      "amount_ok": false,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "samira",
+        "district": "none",
+        "minutes": 0,
+        "rejected": "missing member/district/minutes"
+      },
+      "latency_ms": 1863,
+      "tokens": 519
+    },
+    {
+      "household": "benali",
+      "case": "deadline#1",
+      "text": "Reminder for Samira: inspection visit today, you need to be at the pharmacy half an hour earlier, at 08:15.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "samira",
+        "district": "none",
+        "minutes": 30,
+        "evidence": "inspection visit today, you need to be at the pharmacy half an hour earlier, at 08:15"
+      },
+      "latency_ms": 1888,
+      "tokens": 523
+    },
+    {
+      "household": "benali",
+      "case": "deadline#2",
+      "text": "Samira's manager asks everyone at the pharmacy to start 30 minutes early today (08:15).",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "samira",
+        "district": "none",
+        "minutes": 30,
+        "evidence": "Samira's manager asks everyone at the pharmacy to start 30 minutes early today (08:15)"
+      },
+      "latency_ms": 1877,
+      "tokens": 518
+    },
+    {
+      "household": "benali",
+      "case": "decoy#0",
+      "text": "Car wash promotion: 20% off next week at the station on the ring road.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Car wash promotion: 20% off next week at the station on the ring road"
+      },
+      "latency_ms": 1590,
+      "tokens": 501
+    },
+    {
+      "household": "benali",
+      "case": "decoy#1",
+      "text": "The school canteen menu for next month is now online.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The school canteen menu for next month is now online"
+      },
+      "latency_ms": 1429,
+      "tokens": 489
+    },
+    {
+      "household": "benali",
+      "case": "decoy#2",
+      "text": "Bus operator survey: tell us what you think of the new timetable (closes in two weeks).",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Bus operator survey: tell us what you think of the new timetable (closes in two weeks)"
+      },
+      "latency_ms": 1704,
+      "tokens": 503
+    },
+    {
+      "household": "benali",
+      "case": "decoy#3",
+      "text": "Weather: sunny and mild all week.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Weather: sunny and mild all week"
+      },
+      "latency_ms": 1339,
+      "tokens": 479
+    },
+    {
+      "household": "flatshare",
+      "case": "car_breakdown#0",
+      "text": "The family car failed its brake test yesterday; the garage says it is not safe to drive until the pads are replaced.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The family car failed its brake test yesterday; the garage says it is not safe to drive until the pads are replaced"
+      },
+      "latency_ms": 1790,
+      "tokens": 515
+    },
+    {
+      "household": "flatshare",
+      "case": "car_breakdown#1",
+      "text": "The family car has a flat tyre this morning and the spare is flat too.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The family car has a flat tyre this morning and the spare is flat too"
+      },
+      "latency_ms": 1593,
+      "tokens": 499
+    },
+    {
+      "household": "flatshare",
+      "case": "car_breakdown#2",
+      "text": "Oil was leaking under the family car last night; the mechanic asked us to leave it parked until Thursday.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Oil was leaking under the family car last night; the mechanic asked us to leave it parked until Thursday"
+      },
+      "latency_ms": 1714,
+      "tokens": 509
+    },
+    {
+      "household": "flatshare",
+      "case": "ringroad#0",
+      "text": "Traffic alert 07:00: roadworks have closed two lanes on the main road into Labege; allow about 40 more minutes by car.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Labege",
+        "minutes": 40,
+        "evidence": "roadworks have closed two lanes on the main road into Labe: allow about 40 more minutes by car"
+      },
+      "latency_ms": 1826,
+      "tokens": 527
+    },
+    {
+      "household": "flatshare",
+      "case": "ringroad#1",
+      "text": "Police have blocked the bridge towards Labege after a crash; car journeys to Labege will take around 40 minutes longer.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Labege",
+        "minutes": 40,
+        "evidence": "Police have blocked the bridge towards Labe: the household's car (or one of its cars) must not be used today"
+      },
+      "latency_ms": 1859,
+      "tokens": 523
+    },
+    {
+      "household": "flatshare",
+      "case": "ringroad#2",
+      "text": "Navigation app: severe congestion towards Labege this morning, +40 min for drivers.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Labege",
+        "minutes": 40,
+        "evidence": "severe congestion towards Labe: +40 min for drivers"
+      },
+      "latency_ms": 1572,
+      "tokens": 502
+    },
+    {
+      "household": "flatshare",
+      "case": "no_trip#0",
+      "text": "Amine's boss: the university lab is closed today for a building inspection, stay home.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "amine",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "the university lab is closed today for a building inspection, stay home"
+      },
+      "latency_ms": 1508,
+      "tokens": 500
+    },
+    {
+      "household": "flatshare",
+      "case": "no_trip#1",
+      "text": "Amine's shift at the university lab has been cancelled today.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "amine",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Amine's shift at the university lab has been cancelled today"
+      },
+      "latency_ms": 1466,
+      "tokens": 493
+    },
+    {
+      "household": "flatshare",
+      "case": "no_trip#2",
+      "text": "The fire alarm system at the university lab has failed; the building is closed today and Amine should not come.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "amine",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The fire alarm system at the university lab has failed; the building is closed today and Amine should not come"
+      },
+      "latency_ms": 1743,
+      "tokens": 513
+    },
+    {
+      "household": "flatshare",
+      "case": "deadline#0",
+      "text": "Sofia, the team meeting at the airport logistics hub has been brought forward: please be there by 08:00.",
+      "exact": false,
+      "amount_ok": false,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "sofia",
+        "district": "none",
+        "minutes": 0,
+        "rejected": "missing member/district/minutes"
+      },
+      "latency_ms": 1995,
+      "tokens": 526
+    },
+    {
+      "household": "flatshare",
+      "case": "deadline#1",
+      "text": "Reminder for Sofia: inspection visit today, you need to be at the airport logistics hub half an hour earlier, at 08:00.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "sofia",
+        "district": "Blagnac",
+        "minutes": 30,
+        "evidence": "inspection visit today, you need to be at the airport logistics hub half an hour earlier, at 08:00"
+      },
+      "latency_ms": 2048,
+      "tokens": 531
+    },
+    {
+      "household": "flatshare",
+      "case": "deadline#2",
+      "text": "Sofia's manager asks everyone at the airport logistics hub to start 30 minutes early today (08:00).",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "sofia",
+        "district": "Blagnac",
+        "minutes": 30,
+        "evidence": "Sofia's manager asks everyone at the airport logistics hub to start 30 minutes early today (08:00)"
+      },
+      "latency_ms": 2091,
+      "tokens": 528
+    },
+    {
+      "household": "flatshare",
+      "case": "decoy#0",
+      "text": "Car wash promotion: 20% off next week at the station on the ring road.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Car wash promotion: 20% off next week at the station on the ring road"
+      },
+      "latency_ms": 1636,
+      "tokens": 503
+    },
+    {
+      "household": "flatshare",
+      "case": "decoy#1",
+      "text": "The school canteen menu for next month is now online.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The school canteen menu for next month is now online"
+      },
+      "latency_ms": 1421,
+      "tokens": 491
+    },
+    {
+      "household": "flatshare",
+      "case": "decoy#2",
+      "text": "Bus operator survey: tell us what you think of the new timetable (closes in two weeks).",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Bus operator survey: tell us what you think of the new timetable (closes in two weeks)"
+      },
+      "latency_ms": 1632,
+      "tokens": 505
+    },
+    {
+      "household": "flatshare",
+      "case": "decoy#3",
+      "text": "Weather: sunny and mild all week.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Weather: sunny and mild all week"
+      },
+      "latency_ms": 1315,
+      "tokens": 481
+    },
+    {
+      "household": "garcia",
+      "case": "car_breakdown#0",
+      "text": "The family car failed its brake test yesterday; the garage says it is not safe to drive until the pads are replaced.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "the family car failed its brake test yesterday; the garage says it is not safe to drive until the pads are replaced"
+      },
+      "latency_ms": 1788,
+      "tokens": 505
+    },
+    {
+      "household": "garcia",
+      "case": "car_breakdown#1",
+      "text": "The family car has a flat tyre this morning and the spare is flat too.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The family car has a flat tyre this morning and the spare is flat too"
+      },
+      "latency_ms": 1555,
+      "tokens": 489
+    },
+    {
+      "household": "garcia",
+      "case": "car_breakdown#2",
+      "text": "Oil was leaking under the family car last night; the mechanic asked us to leave it parked until Thursday.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_unavailable",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Oil was leaking under the family car last night; the mechanic asked us to leave it parked until Thursday"
+      },
+      "latency_ms": 1719,
+      "tokens": 499
+    },
+    {
+      "household": "garcia",
+      "case": "ringroad#0",
+      "text": "Traffic alert 07:00: roadworks have closed two lanes on the main road into Mirail; allow about 40 more minutes by car.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Mirail",
+        "minutes": 40,
+        "evidence": "roadworks have closed two lanes on the main road into Mirail; allow about 40 more minutes by car"
+      },
+      "latency_ms": 1775,
+      "tokens": 515
+    },
+    {
+      "household": "garcia",
+      "case": "ringroad#1",
+      "text": "Police have blocked the bridge towards Mirail after a crash; car journeys to Mirail will take around 40 minutes longer.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Mirail",
+        "minutes": 40,
+        "evidence": "Police have blocked the bridge towards Mirail after a crash; car journeys to Mir: 40 minutes longer"
+      },
+      "latency_ms": 1746,
+      "tokens": 507
+    },
+    {
+      "household": "garcia",
+      "case": "ringroad#2",
+      "text": "Navigation app: severe congestion towards Mirail this morning, +40 min for drivers.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "car_delay",
+        "member": "none",
+        "district": "Mirail",
+        "minutes": 40,
+        "evidence": "severe congestion towards Mirail this morning, +40 min for drivers"
+      },
+      "latency_ms": 1604,
+      "tokens": 492
+    },
+    {
+      "household": "garcia",
+      "case": "no_trip#0",
+      "text": "The teachers at the Mirail primary school are on strike today; pupils should not come in.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "lucas",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The teachers at the Mirail primary school are on strike today; pupils should not come in"
+      },
+      "latency_ms": 1651,
+      "tokens": 496
+    },
+    {
+      "household": "garcia",
+      "case": "no_trip#1",
+      "text": "Message from the Mirail primary school: because of a water leak, classes are cancelled today and Lucas stays home.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "lucas",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "classes are cancelled today and Lucas stays home"
+      },
+      "latency_ms": 1389,
+      "tokens": 490
+    },
+    {
+      "household": "garcia",
+      "case": "no_trip#2",
+      "text": "The Mirail primary school is closed this morning for a gas inspection; no lessons today.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_no_trip",
+        "member": "lucas",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The Mirail primary school is closed this morning for a gas inspection; no lessons today"
+      },
+      "latency_ms": 1655,
+      "tokens": 494
+    },
+    {
+      "household": "garcia",
+      "case": "deadline#0",
+      "text": "David, the team meeting at the restaurant has been brought forward: please be there by 08:00.",
+      "exact": false,
+      "amount_ok": false,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "david",
+        "district": "none",
+        "minutes": 0,
+        "rejected": "missing member/district/minutes"
+      },
+      "latency_ms": 1838,
+      "tokens": 509
+    },
+    {
+      "household": "garcia",
+      "case": "deadline#1",
+      "text": "Reminder for David: inspection visit today, you need to be at the restaurant half an hour earlier, at 08:00.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "david",
+        "district": "none",
+        "minutes": 30,
+        "evidence": "inspection visit today, you need to be at the restaurant half an hour earlier, at 08:00"
+      },
+      "latency_ms": 1868,
+      "tokens": 514
+    },
+    {
+      "household": "garcia",
+      "case": "deadline#2",
+      "text": "David's manager asks everyone at the restaurant to start 30 minutes early today (08:00).",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "member_earlier_deadline",
+        "member": "david",
+        "district": "none",
+        "minutes": 30,
+        "evidence": "David's manager asks everyone at the restaurant to start 30 minutes early today (08:00)"
+      },
+      "latency_ms": 1839,
+      "tokens": 508
+    },
+    {
+      "household": "garcia",
+      "case": "decoy#0",
+      "text": "Car wash promotion: 20% off next week at the station on the ring road.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Car wash promotion: 20% off next week at the station on the ring road"
+      },
+      "latency_ms": 1593,
+      "tokens": 493
+    },
+    {
+      "household": "garcia",
+      "case": "decoy#1",
+      "text": "The school canteen menu for next month is now online.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "The school canteen menu for next month is now online"
+      },
+      "latency_ms": 1423,
+      "tokens": 481
+    },
+    {
+      "household": "garcia",
+      "case": "decoy#2",
+      "text": "Bus operator survey: tell us what you think of the new timetable (closes in two weeks).",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Bus operator survey: tell us what you think of the new timetable (closes in two weeks)"
+      },
+      "latency_ms": 1625,
+      "tokens": 495
+    },
+    {
+      "household": "garcia",
+      "case": "decoy#3",
+      "text": "Weather: sunny and mild all week.",
+      "exact": true,
+      "amount_ok": true,
+      "answer": {
+        "effect": "none",
+        "member": "none",
+        "district": "none",
+        "minutes": 0,
+        "evidence": "Weather: sunny and mild all week"
+      },
+      "latency_ms": 1291,
+      "tokens": 471
+    }
+  ]
+}
